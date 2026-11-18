@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dnyanesh Lad — Enterprise Data Engineer | Integration &amp; Solution Architecture</title>
+<meta name="author" content="Dnyanesh Lad">
 <meta name="description" content="Dnyanesh Lad — Enterprise Data Engineer and technical lead focused on complex data integration, solution architecture, reusable data-quality solutions and technical collaboration. Databricks certified.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -109,7 +110,8 @@
     border:1px solid var(--line);
   }
   .id-photo .initials{font-family:var(--font-display); font-size:56px; font-weight:700; color:var(--teal-deep);}
-  .id-photo img{width:100%; height:100%; object-fit:cover; object-position:center 18%;}
+  .id-photo img{width:100%; height:100%; object-fit:cover; object-position:center 18%; display:block;}
+
   .id-row{display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:12px; color:var(--ink-faint); padding:7px 0; border-bottom:1px dashed var(--line);}
   .id-row:last-child{border-bottom:none;}
   .id-row b{font-family:var(--font-mono); font-weight:500; color:var(--ink);}
@@ -249,7 +251,7 @@
       <div>
         <span class="eyebrow">Enterprise Data Engineering · Solution Architecture · Boston, MA</span>
         <h1>Making <em>complex data systems</em> work together.</h1>
-        <p class="lede">Data Engineer and technical lead with 13+ years designing complex enterprise integrations, data warehouses, and reusable data quality solutions. Hands-on SQL and Talend expertise, deep healthcare payer knowledge, and Databricks certifications in Data Engineering and Generative AI.</p>
+        <p class="lede">Data Engineer and technical lead with 13+ years designing complex enterprise integrations, data warehouses, and reusable data quality solutions. Hands-on SQL and Talend expertise, solution architecture and healthcare data modernization experience, and Databricks certifications in Data Engineering and Generative AI.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#experience">View Experience →</a>
           <a class="btn btn-ghost" href="Dnyanesh_Lad_Resume.pdf" download>Download Resume ↓</a>
@@ -261,7 +263,7 @@
         </div>
       </div>
       <div class="id-card reveal">
-        <div class="id-photo"><img src="Dnyanesh_Lad_Headshot.png" alt="Professional headshot of Dnyanesh Lad"></div>
+        <div class="id-photo"><img src="Dnyanesh_Lad_Headshot.webp" alt="Professional portrait of Dnyanesh Lad" width="800" height="800" fetchpriority="high"></div>
         <div class="id-row"><span>role</span><b>Data Engineer · Technical Lead</b></div>
         <div class="id-row"><span>domain</span><b>Healthcare Payer</b></div>
         <div class="id-row"><span>core_stack</span><b>Talend · SQL · Teradata</b></div>
@@ -287,14 +289,14 @@
         <div class="section-tag">01 — About</div>
         <h2>Understand the data. Solve the real problem.</h2>
         <p style="margin-top:18px;">I enjoy working through the data engineering problems that are not straightforward: systems that describe the same entity differently, transformation rules that need careful reasoning, and integrations that must hold up in production.</p>
-        <p>My experience combines hands-on SQL and ETL development with solution architecture, metadata-driven ingestion, data modeling, data quality frameworks, and technical leadership. At Commonwealth Care Alliance, I helped build its Teradata Enterprise Data Platform and led Provider transformation work for a claims migration to Facets. At CareSource, I guided Provider migration, retention, and legacy integration retirement after the CCA acquisition.</p>
+        <p>My experience combines hands-on SQL and ETL development with solution architecture, metadata-driven ingestion, data modeling, data quality frameworks, GitHub CI/CD delivery workflows, and technical leadership. At Commonwealth Care Alliance, I helped build its Teradata Enterprise Data Platform and led Provider transformation work for a claims migration to Facets. At CareSource, I guided Provider migration, retention, and legacy integration retirement after the CCA acquisition.</p>
         <p>Much of that work has been in healthcare payer data, but the engineering principles are transferable across industries. I'm now extending my foundation into the Databricks ecosystem through certifications in Data Engineering and Generative AI.</p>
 
       </div>
       <div class="reveal">
         <div class="edu-card">
           <div class="deg">B.E., Computer Science</div>
-          <div class="inst">Mumbai University · 2006</div>
+          <div class="inst">University of Mumbai</div>
         </div>
         <div class="edu-card">
           <div class="deg">Databricks Certified Data Engineer Associate</div>
@@ -400,154 +402,41 @@
   });
 
   // ---- Data ----
-  const marqueeItems = ["Enterprise Data Integration","Solution Architecture","Technical Leadership","Databricks Certified","Talend","Teradata","Azure SQL","Data Quality","Master Data Management","Claims & Provider Data"];
+  const marqueeItems = ["Enterprise Data Integration","Solution Architecture","Technical Leadership","Databricks Certified","Talend","Teradata","Azure SQL","Data Quality","Master Data Management","GitHub CI/CD"];
 
   const experience = [
-  {
-    "co": "CareSource",
-    "role": "Data Engineer III",
-    "dates": "Jan 2026 – Sep 2026",
-    "via": null,
-    "bullets": [
-      "Led Provider-domain data migration following CareSource's acquisition of Commonwealth Care Alliance (CCA), guiding integration of Cactus credentialing and Facets data using Talend and Azure SQL while addressing differences in source and target data models.",
-      "Designed reusable, metadata-driven Talend utilities for SFTP transfers and database-to-CSV exports, enabling large-scale migration across Provider, Member, Claims, Clinical, and Authorization domains.",
-      "Defined product-specific retention and filtering rules across extensive Cactus credentialing datasets, providing technical direction to the implementation team.",
-      "Evaluated a broad portfolio of legacy Talend jobs for phased retirement, traced cross-system dependencies, and identified an overlooked data flow that prompted changes to the production cutover plan.",
-      "Provided source data extracts to the Modern Data Platform team for ingestion into CareSource's Databricks-based environment."
-    ]
-  },
-  {
-    "co": "Commonwealth Care Alliance (CCA)",
-    "role": "Lead Data Engineer",
-    "dates": "Apr 2021 – Dec 2025",
-    "via": null,
-    "bullets": [
-      "Architected and developed Talend integrations for a Teradata-based Enterprise Data Platform (EDP), introducing metadata-driven ingestion and SCD Type 2 processing across healthcare source systems; designed primary-key reconciliation to detect source hard deletes without native CDC.",
-      "Established a reusable Data Quality framework with rule-level summaries and record-level exceptions, helping business teams resolve source data issues; the approach was adopted by Member, Authorization, Clinical, and Claims teams.",
-      "Architected nightly source-to-platform reconciliation for the EDP Command Center and developed foundational Python/pandas table-population logic for one domain; supported subsequent engineering and Tableau reporting.",
-      "Led Provider data transformation for a major claims migration to Facets, designing NPI/TIN-based identity mapping, attribute consolidation, and migration-specific data quality controls; supported a production launch without unexpected issues.",
-      "Re-engineered an interconnected suite of Talend jobs and subjobs for new Medicare Advantage Prescription Drug (MAPD) products, incorporating plan and reference data while preserving MDM compatibility; delivered on schedule without reported production defects.",
-      "Developed Teradata SQL transformations for outbound Salesforce integration consumed by MuleSoft, alongside Talend-based inbound CRM ingestion with SCD Type 2 history management.",
-      "Refactored Provider outbound integrations following the retirement of the legacy MDM platform, sourcing Cactus data from Azure SQL and reproducing required cleansing and standardization rules; validated results before production deployment.",
-      "Served as Provider Domain technical lead during the Teradata-to-Azure SQL migration, reviewing source inventories, mappings, and validation requirements while coordinating with implementation teams and business stakeholders.",
-      "Led technical support for Provider integrations and personally enhanced the C#/.NET MVC Online Provider Directory using Visual Studio, including manual packaging and IIS deployment; presented and reviewed designs in architecture forums."
-    ]
-  },
-  {
-    "co": "Blue Cross Blue Shield of Massachusetts",
-    "role": "API Systems Analyst",
-    "dates": "Sep 2018 – Feb 2021",
-    "via": "Engaged via Cognizant",
-    "bullets": [
-      "Analyzed enterprise API integration requirements for NCompass, a customized third-party CRM platform, and other consumers including CAQH; translated business data needs into API specifications and technical requirements.",
-      "Profiled and validated source data across SQL databases, mainframe systems, and existing APIs to assess required attributes, request parameters, and integration design options.",
-      "Maintained Swagger/OpenAPI specifications and an extensive enterprise API catalog, helping developers and QA teams clarify requirements, resolve implementation questions, and troubleshoot integration issues.",
-      "Used Postman and SOAP UI extensively to construct and test requests, evaluate responses, validate data, and troubleshoot integration issues.",
-      "Mentored a junior developer on Informatica PowerCenter source-to-landing and staging data preparation for the Reltio MDM project."
-    ]
-  },
-  {
-    "co": "CareSource",
-    "role": "P-MDM Data Analyst",
-    "dates": "Sep 2016 – Sep 2018",
-    "via": "Engaged via Cognizant",
-    "bullets": [
-      "Gathered requirements and authored operating procedures, a user guide, and data dictionary for P-MDM, a custom Provider Credentialing and Contracting application.",
-      "Designed the user-management and role-based screen-access data model, providing technical direction to Java developers; profiled application and MDM data using SQL to inform integration and match/merge analysis.",
-      "Worked with Choreo Provider contracting data structures to support P-MDM integration, contributed to Informatica development, and produced ad hoc network adequacy reports using Facets data."
-    ]
-  },
-  {
-    "co": "Amdocs",
-    "role": "Datawarehouse Analyst/Developer",
-    "dates": "Jul 2013 – Sep 2014",
-    "via": "Engaged via Magna Infotech | Rogers RSHM project",
-    "bullets": [
-      "Developed and enhanced Informatica PowerCenter/Teradata warehouse integrations and transaction-level fact processing for Rogers Remote Smart Home Monitoring (RSHM).",
-      "Built daily, weekly, and monthly reporting data feeds consumed by MicroStrategy dashboards; supported job scheduling through Control-M and applied Informatica pushdown optimization.",
-      "Diagnosed and resolved a production duplication issue caused by an unintended join, and collaborated directly with Rogers stakeholders during two on-site engagements."
-    ]
-  },
-  {
-    "co": "Horizon Blue Cross Blue Shield of New Jersey",
-    "role": "MDM Data Analyst",
-    "dates": "Jul 2011 – Oct 2012",
-    "via": "Engaged via eTeam",
-    "bullets": [
-      "Developed Informatica PowerCenter mappings to integrate heterogeneous XML, Oracle, and SQL Server Provider data into MDM landing and Common Record Format staging structures, including Portico PNO integration.",
-      "Analyzed source-to-target grain discrepancies for the Integrated Data Store (IDS) and designed a SQL LEAD/LAG approach to reconcile effective-dated records without duplication; the outsourced implementation team adopted the solution.",
-      "Investigated MDM matching and rejection patterns, recommending cleansing and matching improvements, and advised data modeling and governance teams on source-system data relationships."
-    ]
-  },
-  {
-    "co": "Centene",
-    "role": "ETL Developer/Analyst",
-    "dates": "Aug 2010 – Jul 2011",
-    "via": "Engaged via eTeam",
-    "bullets": [
-      "Built and deployed Informatica PowerCenter ETL reconciliation for EDI remittance and eligibility data against member-month records, supporting production implementations across multiple states.",
-      "Built and supported warehouse ETL mappings using SQL overrides, pushdown optimization, and unconnected lookups for transformations and data validation."
-    ]
-  }
-];
+    {"co": "CareSource", "role": "Data Engineer III", "dates": "Jan 2026 – Sep 2026", "via": null, "bullets": ["Led Provider-domain data migration after CareSource's acquisition of CCA, guiding Cactus credentialing and Facets integration with Talend and Azure SQL across differing data models.", "Designed reusable, metadata-driven Talend utilities for SFTP transfers and database-to-CSV exports used across Provider, Member, Claims, Clinical, and Authorization migrations.", "Defined product-specific retention and filtering rules for Cactus credentialing data and provided technical direction to the implementation team.", "Reviewed legacy Talend jobs for phased retirement, traced cross-system dependencies, and surfaced an overlooked flow that changed the production cutover plan.", "Produced source extracts for the Modern Data Platform team's ingestion into CareSource's Databricks-based environment."]},
+    {"co": "Commonwealth Care Alliance (CCA)", "role": "Lead Data Engineer", "dates": "Apr 2021 – Dec 2025", "via": null, "bullets": ["Architected and built Talend integrations for a Teradata Enterprise Data Platform, including metadata-driven ingestion, SCD Type 2 processing, and primary-key-based detection of source hard deletes without CDC.", "Established a reusable data quality framework with rule-level summaries and record-level exceptions; adopted by Member, Authorization, Clinical, and Claims teams.", "Architected nightly source-to-platform reconciliation for the EDP Command Center and wrote foundational Python/pandas table-population logic for one domain supporting Tableau reporting.", "Led Provider transformations for a claims migration to Facets, including NPI/TIN identity mapping, attribute consolidation, and data quality controls; supported a launch without unexpected issues.", "Re-engineered interconnected Talend jobs for MAPD products, adding plan/reference data while preserving MDM compatibility; delivered on schedule without reported production defects.", "Developed Teradata SQL transformations for outbound Salesforce integration consumed by MuleSoft, plus Talend-based inbound CRM ingestion with SCD Type 2 history.", "Refactored Provider outbound integrations after legacy MDM retirement, sourcing Cactus data from Azure SQL and restoring cleansing and standardization logic; validated before deployment.", "Served as Provider Domain technical lead during the Teradata-to-Azure SQL migration, reviewing inventories, mappings, and validation requirements with implementation teams and stakeholders.", "Enhanced the C#/.NET MVC Online Provider Directory with Visual Studio, including packaging and IIS deployment; supported Provider integrations and reviewed designs in architecture forums.", "Used GitHub CI/CD workflows supporting Talend integrations, Online Provider Directory (C#/.NET MVC), and SQL code."]},
+    {"co": "Blue Cross Blue Shield of Massachusetts", "role": "API Systems Analyst", "dates": "Sep 2018 – Feb 2021", "via": "Engaged via Cognizant", "bullets": ["Analyzed API requirements for NCompass CRM, CAQH, and other enterprise consumers; translated business data needs into technical API specifications.", "Profiled SQL, mainframe, and API source data; maintained Swagger/OpenAPI specifications and an enterprise API catalog to support development, QA, and troubleshooting.", "Used Postman and SoapUI to construct requests, validate responses and underlying data, and resolve integration issues.", "Mentored a junior developer on Informatica PowerCenter landing and staging data preparation for a Reltio MDM initiative."]},
+    {"co": "CareSource", "role": "P-MDM Data Analyst", "dates": "Sep 2016 – Sep 2018", "via": "Engaged via Cognizant", "bullets": ["Gathered requirements and wrote operating procedures, a user guide, and data dictionary for a custom Provider Credentialing and Contracting application.", "Designed user-management and role-based screen-access data models for Java developers; used SQL profiling to inform integration and MDM match/merge analysis.", "Supported Choreo Provider contracting integration, contributed to Informatica development, and prepared Facets-based network adequacy reports."]},
+    {"co": "Amdocs", "role": "Datawarehouse Analyst/Developer", "dates": "Jul 2013 – Sep 2014", "via": "Engaged via Magna Infotech | Rogers RSHM project", "bullets": ["Developed and enhanced Informatica PowerCenter/Teradata warehouse integrations and transaction-level fact processing for Rogers Remote Smart Home Monitoring.", "Built daily, weekly, and monthly MicroStrategy reporting feeds; supported Control-M scheduling and applied Informatica pushdown optimization.", "Resolved a production duplication defect caused by an unintended join; collaborated with Rogers stakeholders during two on-site engagements."]},
+    {"co": "Horizon Blue Cross Blue Shield of New Jersey", "role": "MDM Data Analyst", "dates": "Jul 2011 – Oct 2012", "via": "Engaged via eTeam", "bullets": ["Built Informatica PowerCenter mappings for XML, Oracle, and SQL Server Provider sources into MDM landing and Common Record Format staging, including Portico PNO.", "Identified source-to-target grain differences and devised a SQL LEAD/LAG solution for duplicate-free effective-dated records; adopted by the implementation team.", "Investigated MDM matching and rejections, recommending cleansing and match-rule improvements; advised modeling and governance teams."]},
+    {"co": "Centene", "role": "ETL Developer/Analyst", "dates": "Aug 2010 – Jul 2011", "via": "Engaged via eTeam", "bullets": ["Built and deployed Informatica PowerCenter reconciliation for EDI remittance and eligibility data against member-month records across multiple states.", "Developed warehouse ETL mappings with SQL overrides, pushdown optimization, and unconnected lookups for transformation and validation."]}
+  ];
 
   const skills = [
-  {
-    "field": "Platforms & Advanced SQL",
-    "val": "Databricks (Spark/PySpark, Delta Lake, Unity Catalog), Teradata, Azure SQL, SQL Server, Oracle, Salesforce, Dataverse"
-  },
-  {
-    "field": "ETL, MDM & BI Tools",
-    "val": "Talend, Informatica PowerCenter, Azure Data Factory, Informatica MDM, Reltio, Tableau, Power BI, Python/pandas"
-  },
-  {
-    "field": "Scheduling & Orchestration",
-    "val": "Control-M, Tidal, Apache Airflow, Databricks Lakeflow Jobs"
-  },
-  {
-    "field": "APIs & Development Tools",
-    "val": "Postman, SoapUI, Swagger/OpenAPI, C#/.NET MVC, Visual Studio, IIS, GitHub, SVN, Jira, Agile/SDLC"
-  },
-  {
-    "field": "AI Tools & Methodologies",
-    "val": "Microsoft Copilot Studio; Databricks AI (Agent Bricks, RAG, MCP, MLflow/Prompt Registry, Mosaic AI Vector Search)"
-  },
-  {
-    "field": "Healthcare Data Models",
-    "val": "Cactus, Facets, Portico PNO, Choreo, GuidingCare"
-  }
-];
+    {"field": "SQL & DATA WAREHOUSING", "val": "Advanced SQL, Teradata, Azure SQL, SQL Server, Oracle"},
+    {"field": "ETL/ELT TOOLS", "val": "Talend, Informatica PowerCenter"},
+    {"field": "PIPELINE DESIGN", "val": "Metadata-driven ingestion, reusable utilities, source-to-target mapping, SCD Type 2, reconciliation, pushdown optimization"},
+    {"field": "DATA QUALITY & MDM", "val": "Source profiling, data quality auditing and exception reporting, cleansing/validation, Informatica MDM, Reltio"},
+    {"field": "CLOUD & DATA PLATFORMS", "val": "Databricks (PySpark, Delta Lake, Unity Catalog), Azure Data Factory (migration oversight), Salesforce"},
+    {"field": "PROGRAMMING & SCRIPTING", "val": "Python/pandas, SQL, C#/.NET MVC"},
+    {"field": "ORCHESTRATION & DELIVERY", "val": "Apache Airflow, Control-M, Tidal, GitHub CI/CD, Jira, Agile/SDLC"},
+    {"field": "REPORTING & BI", "val": "Tableau, Power BI"},
+    {"field": "API TOOLS", "val": "Postman, SoapUI, Swagger/OpenAPI"},
+    {"field": "HEALTHCARE DATA SYSTEMS", "val": "Cactus, Facets, Portico PNO, Choreo, GuidingCare, MP (Market Prominence), eCW"}
+  ];
 
   // Featured projects are intentionally disabled until verified public repositories exist.
   /* const projects = [];
   */
 
   const certs = [
-  {
-    "name": "Databricks Certified Data Engineer Associate",
-    "issuer": "Databricks",
-    "date": "2026",
-    "url": "https://credentials.databricks.com/f5f95ac7-c521-420b-b33d-45ef6c0fb397#acc.QfkIG1HX"
-  },
-  {
-    "name": "Databricks Certified Generative AI Engineer Associate",
-    "issuer": "Databricks",
-    "date": "2026",
-    "url": "https://credentials.databricks.com/24eb2b1e-15f0-4be8-a8b4-8b8ea6065c9d#acc.IdmlU5CJ"
-  },
-  {
-    "name": "Google AI Professional Certificate",
-    "issuer": "Google",
-    "date": "2026",
-    "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/P7G44E2UYSX3"
-  },
-  {
-    "name": "Reltio Cloud Advanced Certification",
-    "issuer": "Reltio",
-    "date": "2019",
-    "url": null
-  }
-];
+    {"name": "Databricks Certified Data Engineer Associate", "issuer": "Databricks", "date": "2026", "url": "https://credentials.databricks.com/24eb2b1e-15f0-4be8-a8b4-8b8ea6065c9d#acc.IdmlU5CJ"},
+    {"name": "Databricks Certified Generative AI Engineer Associate", "issuer": "Databricks", "date": "2026", "url": "https://credentials.databricks.com/f5f95ac7-c521-420b-b33d-45ef6c0fb397#acc.QfkIG1HX"},
+    {"name": "Google AI Professional Certificate", "issuer": "Google", "date": "2026", "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/P7G44E2UYSX3"},
+    {"name": "Reltio Cloud Advanced Certification", "issuer": "Reltio", "date": "2019", "url": null}
+  ];
 
   // ---- Render marquee ----
   document.getElementById('marquee').innerHTML = [...marqueeItems, ...marqueeItems].map(i => `<span>${i}</span>`).join('');
